@@ -1,6 +1,6 @@
 {
 	"{{name}}": {
-		"menuItem": "Dev Dashboard",
+		"menuItem": "{{name}}",
 		"jira": {
 			"title": "Jira",
 			"key": "Key",

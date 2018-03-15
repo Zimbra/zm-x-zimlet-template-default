@@ -7,7 +7,7 @@
 
 ``` bash
 $ npm install -g zimlet-cli
-$ zimlet create zimlet-default-template my-zimlet
+$ zimlet create billneff79/zimlet-default-template my-zimlet
 $ cd my-zimlet
 $ npm install
 $ npm start

@@ -13,6 +13,9 @@
   },
   "keywords": ["zimlet", "ZimbraX", "Zimbra"],
   "author": "",
+  "eslintConfig": {
+    "extends": "eslint-config-synacor"
+  },
   "devDependencies": {
     "@zimbra/zimlet-cli": "^1.1.0",
     "eslint-config-synacor": "^3.0.0"

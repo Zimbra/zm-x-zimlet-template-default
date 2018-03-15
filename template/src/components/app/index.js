@@ -12,7 +12,7 @@ export default function createApp(context) {
 
 		render({ Sidebar }) {
 			return (
-				<div class={style.devDashboard}>
+				<div class={style.{{name}}}>
 					{/*Example of using component from ZimbraX client, in this case, Sidebar*/}
 					<Sidebar>
 						<h3>Links</h3>

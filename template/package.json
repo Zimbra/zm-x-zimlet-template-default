@@ -1,0 +1,24 @@
+{
+  "name": "{{name}}",
+  "version": "1.0.0",
+  "license": "MIT",
+  "description": "TBD",
+  "main": "build/index.js",
+  "module": "src/index.js",
+  "scripts": {
+    "build": "zimlet build",
+    "start": "zimlet watch",
+    "package": "zimlet package"
+  },
+  "keywords": [],
+  "author": "",
+  "devDependencies": {
+    "@zimbra/zimlet-cli": "^1.0.2",
+    "eslint-config-synacor": "^3.0.0"
+  },
+  "dependencies": {
+    "preact-context-provider": "^1.1.1",
+    "preact-i18n": "^1.2.0",
+    "wiretie": "^1.0.3"
+  }
+}

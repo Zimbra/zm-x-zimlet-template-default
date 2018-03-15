@@ -1,0 +1,14 @@
+@import '~@zimbra/ui/helpers.less';
+
+.{{name}} {
+	display: flex;
+	flex-direction: column;
+}
+
+.main {
+	position: absolute;
+	height: 100%;
+	width: ~"calc(100% - @{sidebar-width})";
+	overflow-y: scroll;
+	padding: 20px;
+}

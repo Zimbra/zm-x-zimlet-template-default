@@ -9,7 +9,8 @@
   "scripts": {
     "build": "zimlet build",
     "start": "zimlet watch",
-    "package": "zimlet package"
+    "package": "zimlet package",
+    "test": "eslint src"
   },
   "keywords": ["zimlet", "ZimbraX", "Zimbra"],
   "author": "",
@@ -18,6 +19,7 @@
   },
   "devDependencies": {
     "@zimbra/zimlet-cli": "^1.1.0",
+    "eslint": "^4.18.2",
     "eslint-config-synacor": "^3.0.0"
   },
   "dependencies": {

@@ -11,7 +11,7 @@
     "start": "zimlet watch",
     "package": "zimlet package"
   },
-  "keywords": [],
+  "keywords": ['zimlet', 'ZimbraX'],
   "author": "",
   "devDependencies": {
     "@zimbra/zimlet-cli": "^1.0.2",

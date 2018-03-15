@@ -2,6 +2,7 @@ import { h, Component } from 'preact';
 import { provide } from 'preact-context-provider';
 import { withIntl } from '../../enhancers';
 import wire from 'wiretie';
+import style from 'style';
 
 export default function createApp(context) {
 

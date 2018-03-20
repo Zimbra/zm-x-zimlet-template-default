@@ -8,6 +8,7 @@
   "module": "src/index.js",
   "scripts": {
     "build": "zimlet build",
+    "watch": "zimlet watch",
     "start": "zimlet watch",
     "package": "zimlet package",
     "test": "eslint src"

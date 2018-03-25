@@ -1,4 +1,4 @@
-# zimlet-default-template
+# zm-x-zimlet-template-default
 
 ## Documentation
 - This is the default template for [zimlet-cli](https://github.com/zimbra/zimlet-cli).

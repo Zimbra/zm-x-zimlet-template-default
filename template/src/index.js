@@ -24,7 +24,8 @@ export default function Zimlet(context) {
 		];
 	}
 
-	// Create a main nav menu item
+	// Create a main nav menu item.
+	// withIntl should be used on every component registered via plugins.register(). You will see this in the App index.js file as well
 	const MenuItem = withIntl(() => ( //inside withIntl() is where you would grab any props that were passed in
 		// list of components can be found in zm-x-web, zimlet-manager/index.js, and more can be added if needed
 		<components.MenuItem

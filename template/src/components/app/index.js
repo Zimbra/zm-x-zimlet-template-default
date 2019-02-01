@@ -3,12 +3,15 @@ import { provide } from 'preact-context-provider';
 import { withIntl } from '../../enhancers';
 import wire from 'wiretie';
 import style from './style';
+// Can also use shimmed decorators like graphql or withText.
+// Or, utils, like callWtih. Refer to zm-x-web, zimbraManager/shims.js
+// More shims can be added here if necessary; also requires an update to zimlet-cli
 
 export default function createApp(context) {
 
 	@withIntl
-	@provide({ zimbraComponents: context.components })
-	@wire('zimbraComponents', null, ({ Sidebar }) => ({ Sidebar }))
+	@provide({ zimbraComponents: context.components }) //get components from context, and provide as a variable called
+	@wire('zimbraComponents', null, ({ Sidebar }) => ({ Sidebar })) //extract your component(s) for use
 	class App extends Component {
 
 		render({ Sidebar }) {

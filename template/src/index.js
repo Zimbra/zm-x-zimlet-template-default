@@ -13,7 +13,7 @@ export default function Zimlet(context) {
 		// the zimlet slots to load into,
 		// and what is being loaded into that slot
 		// (MenuItem and Router are both defined below)
-		plugins.register('slot::menu', MenuItem); //alternately, you can load App and have all your components listed in src/components/app and your own custom files
+		plugins.register('slot::menu', MenuItem); //alternately, you can load 'App' instead of a component, and have all your components listed in src/components/app and your own custom files
 		plugins.register('slot::routes', Router); // only needed if you need to create a new url route, like for a menu tab, or print, etc
 	};
 

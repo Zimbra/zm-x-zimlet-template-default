@@ -10,7 +10,7 @@ import style from './style';
 export default function createApp(context) {
 
 	@withIntl
-	@provide({ zimbraComponents: context.components }) //get components from context, and provide as a variable called
+	@provide({ zimbraComponents: context.components }) //get components from context, and provide as a variable called zimbraComponents
 	@wire('zimbraComponents', null, ({ Sidebar }) => ({ Sidebar })) //extract your component(s) for use
 	class App extends Component {
 

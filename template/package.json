@@ -11,7 +11,8 @@
     "watch": "zimlet watch",
     "start": "zimlet watch",
     "package": "zimlet package",
-    "test": "eslint src"
+    "test": "eslint src",
+    "security:audit": "audit-ci --moderate --report"
   },
   "keywords": ["zimlet", "ZimbraX", "Zimbra"],
   "author": "",
@@ -20,8 +21,13 @@
   },
   "devDependencies": {
     "@zimbra/zimlet-cli": "^5.0.0",
+    "audit-ci": "^1.7.0",
     "eslint": "^5.16.0",
-    "eslint-config-synacor": "^3.0.4"
+    "prettier-eslint": "^8.8.2",
+    "eslint-config-synacor": "^3.0.4",
+    "eslint-plugin-preact-i18n": "^1.0.1",
+    "eslint-config-prettier": "^4.2.0",
+    "eslint-plugin-prettier": "^3.0.1"
   },
   "dependencies": {
     "preact-context-provider": "^1.2.0",

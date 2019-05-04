@@ -43,7 +43,7 @@ jobs:
           npm run package -- \
             --name="{{name}}" \
             --desc="{{name}}" \
-            --zimbraXVersion=">=1.0.0" \
+            --zimbraXVersion=">=0.0.1" \
             --pkg-version="1.0.0"
 
       - store_artifacts:

@@ -47,7 +47,7 @@ module.exports = {
 			"languageFiles": [
 				{
 					"name": "en_US",
-					"path": "src/intl/en-us.json"
+					"path": "src/intl/en_US.json"
 				}
 			],
 			"textComponents": [

@@ -2,13 +2,12 @@ import { h } from 'preact';
 import { Text } from 'preact-i18n';
 import { SLUG } from './constants';
 import { withIntl } from './enhancers';
-import createApp from './components/app';
+import App from './components/app';
 
 export default function Zimlet(context) {
 	const { plugins, components } = context;
 	const exports = {};
-	const App = createApp(context);
-	
+
 	exports.init = function init() {
 		// the zimlet slots to load into,
 		// and what is being loaded into that slot
@@ -27,7 +26,7 @@ export default function Zimlet(context) {
 	// Create a main nav menu item.
 	// withIntl should be used on every component registered via plugins.register(). You will see this in the App index.js file as well
 	const MenuItem = withIntl(() => ( //inside withIntl() is where you would grab any props that were passed in
-		// list of components can be found in zm-x-web, zimlet-manager/index.js, and more can be added if needed
+		// list of components can be found in zm-x-web, zimlet-manager/shims.js, and more can be added if needed
 		<components.MenuItem
 			responsive
 			icon="fa:code"

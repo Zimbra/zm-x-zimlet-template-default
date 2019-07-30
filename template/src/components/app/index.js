@@ -7,7 +7,7 @@ import style from './style';
 // More shims can be added here if necessary; also requires an update to zimlet-cli
 
 @withIntl
-class App extends Component {
+export default class App extends Component {
 	render() {
 		return (
 			<div class={style.wrapper}>

@@ -6,7 +6,7 @@
 ## Usage
 
 ``` bash
-$ npm install -g zimlet-cli
+$ npm install -g @zimbra/zimlet-cli
 $ zimlet create zimbra/zm-x-zimlet-template-default my-zimlet
 $ cd my-zimlet
 $ npm install

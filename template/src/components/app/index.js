@@ -1,4 +1,4 @@
-import { h, Component } from 'preact';
+import { createElement, Component } from 'preact';
 import { withIntl } from '../../enhancers';
 import { Sidebar } from '@zimbra-client/components';
 import style from './style';
@@ -6,7 +6,7 @@ import style from './style';
 // Or, utils, like callWtih. Refer to zm-x-web, zimbraManager/shims.js
 // More shims can be added here if necessary; also requires an update to zimlet-cli
 
-@withIntl
+@withIntl()
 export default class App extends Component {
 	render() {
 		return (

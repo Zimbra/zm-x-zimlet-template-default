@@ -40,7 +40,7 @@ module.exports = {
 	},
 	"settings": {
 		"react": {
-			"pragma": "h",
+			"pragma": "createElement",
 			"version": "15.0"
 		},
 		"preact-i18n": {

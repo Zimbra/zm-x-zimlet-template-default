@@ -10,26 +10,29 @@
     "build": "zimlet build && cp .netlify/* build",
     "watch": "zimlet watch",
     "start": "zimlet watch",
-    "package": "zimlet package",
-    "test": "eslint src",
+    "package": "zimlet package --name $npm_package_name --description $npm_package_description --pkg-version $npm_package_version --zimbraXVersion '>=2.0.0'",
+    "lint": "eslint src",
+    "lint:fix": "npm run lint -- --fix",
     "security:audit": "audit-ci --moderate --report"
   },
-  "keywords": ["zimlet", "ZimbraX", "Zimbra"],
+  "keywords": [
+    "zimlet",
+    "ZimbraX",
+    "Zimbra"
+  ],
   "author": "",
   "eslintConfig": {
     "extends": "eslint-config-synacor"
   },
   "devDependencies": {
-    "@zimbra/zimlet-cli": "^5.5.0",
-    "audit-ci": "^1.7.0",
-    "eslint": "^5.16.0",
-    "prettier-eslint": "^8.8.2",
-    "eslint-config-synacor": "^3.0.4",
+    "@zimbra/zimlet-cli": "^7.0.0",
+    "audit-ci": "^2.4.2",
+    "eslint": "^6.8.0",
+    "prettier-eslint": "^9.0.1",
+    "eslint-config-synacor": "^3.0.5",
     "eslint-plugin-preact-i18n": "^1.0.1",
-    "eslint-config-prettier": "^4.2.0",
-    "eslint-plugin-prettier": "^3.0.1"
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-plugin-prettier": "^3.1.2"
   },
-  "dependencies": {
-    "preact-i18n": "^1.3.0"
-  }
+  "dependencies": {}
 }

@@ -40,11 +40,7 @@ jobs:
 
       - run: |
           npm run build
-          npm run package -- \
-            --name="{{name}}" \
-            --desc="{{name}}" \
-            --zimbraXVersion=">=0.0.1" \
-            --pkg-version="1.0.0"
+          npm run package
 
       - store_artifacts:
           path: ~/repo/pkg
@@ -67,7 +63,6 @@ jobs:
 
       - run: npm run security:audit
 
-
 ################################################
 
 ################# Executors ####################
@@ -79,7 +74,6 @@ executors:
       - image: circleci/node:11
 
 ################################################
-
 
 ################# Workflows ####################
 
@@ -101,5 +95,4 @@ workflows:
       - security-audit:
           requires:
             - prepare-npm-deps
-
 ################################################

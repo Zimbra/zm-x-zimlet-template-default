@@ -25,7 +25,7 @@ export default function Zimlet(context) {
 
 	// Create a main nav menu item.
 	// withIntl should be used on every component registered via plugins.register(). You will see this in the App index.js file as well
-	const CustomMenuItem = withIntl(() => (
+	const CustomMenuItem = withIntl()(() => (
 		// List of components can be found in zm-x-web, zimlet-manager/shims.js, and more can be added if needed
 		<MenuItem responsive icon="fa:code" href={`/${SLUG}`}>
 			<Text id="{{name}}.menuItem" />

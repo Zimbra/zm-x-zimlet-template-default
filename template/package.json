@@ -4,13 +4,14 @@
   "version": "1.0.0",
   "license": "MIT",
   "description": "TBD",
+  "label": "TBD",
   "main": "build/index.js",
   "module": "src/index.js",
   "scripts": {
     "build": "zimlet build && cp .netlify/* build",
     "watch": "zimlet watch",
     "start": "zimlet watch",
-    "package": "zimlet package --name $npm_package_name --description $npm_package_description --pkg-version $npm_package_version --zimbraXVersion '^2.0.0'",
+    "package": "zimlet package --name \"$npm_package_name\" --description \"$npm_package_description\" --label \"$npm_package_label\" --pkg-version $npm_package_version --zimbraXVersion '^2.0.0'",
     "lint": "eslint src",
     "lint:fix": "npm run lint -- --fix",
     "security:audit": "audit-ci --moderate --report"

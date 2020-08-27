@@ -7,9 +7,32 @@ import { MenuItem } from '@zimbra-client/components';
 import { useClientConfig } from '@zimbra-client/hooks';
 
 export default function Zimlet(context) {
-	const { slugs } = useClientConfig({ slugs: 'routes.slugs' });
 	const { plugins } = context;
 	const exports = {};
+
+	// Register a new route with the preact-router instance
+	function Router() {
+		const { slugs } = useClientConfig({ slugs: 'routes.slugs' });
+		return [<App path={`/${slugs.email}/${SLUG}`} />];
+	}
+
+	// Create a main nav menu item.
+	// withIntl should be used on every component registered via plugins.register(). You will see this in the App index.js file as well
+	const CustomMenuItemInner = () => {
+		const { slugs } = useClientConfig({ slugs: 'routes.slugs' });
+		return (
+			// List of components can be found in zm-x-web, zimlet-manager/shims.js, and more can be added if needed
+			<MenuItem
+				responsive
+				icon='question-circle'
+				href={`/${slugs.email}/${SLUG}`}
+			>
+				<Text id='{{name}}.menuItem' />
+			</MenuItem>
+		);
+	};
+
+	const CustomMenuItem = withIntl()(CustomMenuItemInner);
 
 	exports.init = function init() {
 		// The zimlet slots to load into, and what is being loaded into that slot
@@ -20,23 +43,6 @@ export default function Zimlet(context) {
 		plugins.register('slot::routes', Router);
 	};
 
-	// Register a new route with the preact-router instance
-	function Router() {
-		return [<App path={`/${slugs.email}/${SLUG}`} />];
-	}
-
-	// Create a main nav menu item.
-	// withIntl should be used on every component registered via plugins.register(). You will see this in the App index.js file as well
-	const CustomMenuItem = withIntl()(() => (
-		// List of components can be found in zm-x-web, zimlet-manager/shims.js, and more can be added if needed
-		<MenuItem
-			responsive
-			icon='question-circle'
-			href={`/${slugs.email}/${SLUG}`}
-		>
-			<Text id='{{name}}.menuItem' />
-		</MenuItem>
-	));
 
 	return exports;
 }

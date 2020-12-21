@@ -85,7 +85,7 @@ jobs:
     executor: default-executor
 
     steps:
-      - attach_workspace:
+      - attach_workspace
 
       - run: |
           npm run build

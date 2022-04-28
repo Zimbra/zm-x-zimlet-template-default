@@ -2,8 +2,8 @@ version: 2.1
 
 ############################################################################
 orbs:
-  aws-s3: circleci/aws-s3@1.0.11
-  jq: circleci/jq@1.9.1
+  aws-s3: circleci/aws-s3@3.0.0
+  jq: circleci/jq@2.2.0
 
 ############################################################################
 
@@ -110,7 +110,7 @@ jobs:
     steps:
       - *attach-workspace
 
-      - run: npm run security:audit  
+      - run: npm run security:audit
 
   build-u18:
     working_directory: ~/repo
@@ -163,7 +163,7 @@ jobs:
   deploy-s3:
     working_directory: ~/repo
     docker:
-      - image: "circleci/python:2.7"
+      - image: "cimg/python:2.7"
     steps:
       - *attach-workspace
 
@@ -184,7 +184,7 @@ executors:
   default-executor:
     working_directory: ~/repo
     docker:
-      - image: circleci/node:11
+      - image: cimg/node:14.18
 
 ################################################
 
@@ -246,5 +246,5 @@ workflows:
       - deploy-s3:
           requires:
             - deploy-s3-approval
-            
+
 ################################################

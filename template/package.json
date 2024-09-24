@@ -13,8 +13,7 @@
     "start": "zimlet watch",
     "package": "zimlet package --name \"$npm_package_name\" --description \"$npm_package_description\" --label \"$npm_package_label\" --pkg-version $npm_package_version --zimbraXVersion '^4.0.0'",
     "lint": "eslint src",
-    "lint:fix": "npm run lint -- --fix",
-    "security:audit": "audit-ci --moderate --report-type full --pass-enoaudit --skip-dev"
+    "lint:fix": "npm run lint -- --fix"
   },
   "keywords": [
     "zimlet",
@@ -26,14 +25,13 @@
     "extends": "eslint-config-synacor"
   },
   "devDependencies": {
-    "@zimbra/zimlet-cli": "^14.0.0",
-    "audit-ci": "^6.2.0",
+    "@zimbra/zimlet-cli": "^17.1.0",
     "eslint": "^8.14.0",
-    "prettier-eslint": "^14.0.2",
+    "eslint-config-prettier": "^8.5.0",
     "eslint-config-synacor": "^3.0.5",
     "eslint-plugin-preact-i18n": "^1.1.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-prettier": "^4.0.0"
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier-eslint": "^14.0.2"
   },
   "dependencies": {}
 }

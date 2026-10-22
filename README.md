@@ -30,8 +30,6 @@ Development server runs on port `8081`
 
 - `npm run package`: Package the zimlet for deployment to a Zimbra server. Run `npm run build` first
 
-- `npm run security:audit`: Check dependencies for known vulnerabilities
-
 ### Fork It And Make Your Own
 
 You can fork this repo to create your own boilerplate, and use it with `zimlet-cli`:

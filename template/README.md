@@ -6,8 +6,13 @@ A Zimbra Modern UI Zimlet. It adds a tab to the Email section that opens a "Hell
 
 - `src/index.js`: Zimlet entry point; registers the tab and its page in the Modern UI.
 - `src/components/`: UI components (`EmailTabItem` is the tab, `App` is the page).
-- `src/intl/en_US.json`: Zimlet label, description and the translated texts.
+- `src/intl/en_US.json`: Zimlet label, description and the translated texts (see below).
 - `src/constants/`, `src/enhancers/`: shared constant and the translation wrapper used by components.
+
+### `src/intl/en_US.json`
+
+- `zimlet.label` and `zimlet.description`: the Zimlet's display name and description. `npm run package` writes them into the Zimlet descriptor, so they are required. Users see them in Settings under Add-ons (Zimlets), and administrators see them in the admin console.
+- `{{ name }}.*`: texts used by the components through `<Text id="{{ name }}.key" />`. `menuItem` is the label of the tab in the Email section and `helloWorld` is the text on the page it opens. Add your own keys here.
 
 ## CLI Commands
 

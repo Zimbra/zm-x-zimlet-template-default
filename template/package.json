@@ -11,8 +11,7 @@
     "start": "zimlet watch",
     "package": "zimlet package --name \"$npm_package_name\" --pkg-version $npm_package_version --zimbraXVersion '^4.0.0'",
     "lint": "eslint src",
-    "lint:fix": "npm run lint -- --fix",
-    "security:audit": "npx audit-ci@^6 --moderate --report-type summary --pass-enoaudit"
+    "lint:fix": "npm run lint -- --fix"
   },
   "lint-staged": {
     "src/**/*.{js,mjs}": [
@@ -25,7 +24,7 @@
   ],
   "author": "",
   "devDependencies": {
-    "@zimbra/eslint-config": "^3.0.0",
+    "@zimbra/eslint-config": "^4.1.0",
     "@zimbra/zimlet-cli": "^19.0.0",
     "eslint": "^9.39.4",
     "husky": "^9.1.7",

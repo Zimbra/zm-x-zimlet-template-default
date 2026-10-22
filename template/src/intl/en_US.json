@@ -1,5 +1,10 @@
 {
+	"zimlet": {
+		"label": "{{name}}",
+		"description": "Describe what this Zimlet does."
+	},
 	"{{name}}": {
-		"menuItem": "{{name}}"
+		"menuItem": "{{name}}",
+		"helloWorld": "Hello World"
 	}
 }

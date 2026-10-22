@@ -1,3 +1,6 @@
+// Reuses the Modern UI's shared style helpers.
+@import '~@zimbra/x-ui/helpers.less';
+
 .wrapper {
 	display: flex;
 	flex-direction: column;
@@ -5,8 +8,9 @@
 }
 
 .main {
-	position: absolute;
-	height: 100%;
-	width: 100%;
-	padding: 20px;
+	// Makes the page fill the available space.
+	.fill();
+	// --spacing-md and --body-bg are CSS variables set by the Modern UI, so they follow its theme.
+	padding: var(--spacing-md);
+	background-color: var(--body-bg);
 }

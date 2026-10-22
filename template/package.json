@@ -2,38 +2,36 @@
   "private": true,
   "name": "{{name}}",
   "version": "1.0.0",
-  "license": "MIT",
-  "description": "TBD",
-  "label": "TBD",
   "main": "build/index.js",
   "module": "src/index.js",
   "scripts": {
+    "prepare": "husky || true",
     "build": "zimlet build",
     "watch": "zimlet watch",
     "start": "zimlet watch",
-    "package": "zimlet package --name \"$npm_package_name\" --description \"$npm_package_description\" --label \"$npm_package_label\" --pkg-version $npm_package_version --zimbraXVersion '^4.0.0'",
+    "package": "zimlet package --name \"$npm_package_name\" --pkg-version $npm_package_version --zimbraXVersion '^4.0.0'",
     "lint": "eslint src",
-    "lint:fix": "npm run lint -- --fix",
-    "security:audit": "audit-ci --moderate --report-type full --pass-enoaudit --skip-dev"
+    "lint:fix": "npm run lint -- --fix"
+  },
+  "lint-staged": {
+    "src/**/*.{js,mjs}": [
+      "eslint --no-warn-ignored"
+    ]
   },
   "keywords": [
     "zimlet",
-    "ZimbraX",
     "Zimbra"
   ],
   "author": "",
-  "eslintConfig": {
-    "extends": "eslint-config-synacor"
-  },
   "devDependencies": {
-    "@zimbra/zimlet-cli": "^14.0.0",
-    "audit-ci": "^6.2.0",
-    "eslint": "^8.14.0",
-    "prettier-eslint": "^14.0.2",
-    "eslint-config-synacor": "^3.0.5",
-    "eslint-plugin-preact-i18n": "^1.1.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-prettier": "^4.0.0"
+    "@zimbra/eslint-config": "^4.1.0",
+    "@zimbra/zimlet-cli": "^19.0.0",
+    "eslint": "^9.39.4",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.4.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@zimbra/x-ui": "^13.1.0",
+    "lucide-preact": "^1.47.0"
+  }
 }

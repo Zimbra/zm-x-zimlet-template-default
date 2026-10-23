@@ -6,13 +6,28 @@ A Zimbra Modern UI Zimlet. It adds a tab to the Email section that opens a "Hell
 
 - `src/index.js`: Zimlet entry point; registers the tab and its page in the Modern UI.
 - `src/components/`: UI components (`EmailTabItem` is the tab, `App` is the page).
-- `src/intl/en_US.json`: Zimlet label, description and the translated texts (see below).
+- `src/intl/`: Zimlet label, description and the translated texts, one JSON file per language (see below).
 - `src/constants/`, `src/enhancers/`: shared constant and the translation wrapper used by components.
 
 ### `src/intl/en_US.json`
 
 - `zimlet.label` and `zimlet.description`: the Zimlet's display name and description. `npm run package` writes them into the Zimlet descriptor, so they are required. Users see them in Settings under Add-ons (Zimlets), and administrators see them in the admin console.
 - `{{ name }}.*`: texts used by the components through `<Text id="{{ name }}.key" />`. `menuItem` is the label of the tab in the Email section and `helloWorld` is the text on the page it opens. Add your own keys here.
+
+### Adding other languages
+
+To translate the Zimlet, add one file per language to `src/intl/`, named after the language's locale code, for example `de.json`, `fr_FR.json` or `ja.json`. Use the same keys as `en_US.json` with translated values. `npm run package` includes every `.json` file in that folder. A file whose name does not match a locale code is not loaded.
+
+To get the locale codes for the languages your server offers, an administrator can run the commands below. If you don't have access to the server, ask your administrator for the codes.
+
+```bash
+su - zimbra
+zmsoap -z -t account -m admin@$(zmhostname) GetAvailableLocalesRequest
+```
+
+The `id` of each language in the output is its locale code. Use it as the file name, for example `ja` gives `src/intl/ja.json`.
+
+Add `zimlet.label` and `zimlet.description` to each translated file as well. The admin console reads them from the packaged files, and a language without them shows no usable label or description.
 
 ## CLI Commands
 
@@ -27,8 +42,6 @@ A Zimbra Modern UI Zimlet. It adds a tab to the Email section that opens a "Hell
 - `npm run lint`: Check the code in `src/` with ESLint
 
 - `npm run lint:fix`: Run `lint` and automatically fix what it can
-
-- `npm run security:audit`: Fail if installed dependencies have known vulnerabilities of moderate severity or higher. Used by CI
 
 Run `npm install` first to install the dependencies.
 

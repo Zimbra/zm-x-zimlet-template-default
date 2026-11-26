@@ -9,7 +9,7 @@
     "build": "zimlet build",
     "watch": "zimlet watch",
     "start": "zimlet watch",
-    "package": "zimlet package --name \"$npm_package_name\" --pkg-version $npm_package_version --zimbraXVersion '^4.0.0'",
+    "package": "zimlet package --name \"$npm_package_name\" --pkg-version $npm_package_version --zimbraXVersion '^5.0.0'",
     "lint": "eslint src",
     "lint:fix": "npm run lint -- --fix"
   },
@@ -25,7 +25,7 @@
   "author": "",
   "devDependencies": {
     "@zimbra/eslint-config": "^4.1.0",
-    "@zimbra/zimlet-cli": "^19.0.0",
+    "@zimbra/zimlet-cli": "^20.0.0",
     "eslint": "^9.39.4",
     "husky": "^9.1.7",
     "lint-staged": "^16.4.0"

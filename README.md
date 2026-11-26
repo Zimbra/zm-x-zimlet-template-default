@@ -5,6 +5,7 @@ The default starter template for [zimlet-cli](https://github.com/zimbra/zimlet-c
 ## Requirements
 
 - Node.js 24 (the version used by the template's CI)
+- A Zimbra server that runs Modern UI 5.0.0 or later in version 5. The `package` script builds for the range `^5.0.0`, and the template uses `@zimbra/zimlet-cli` 20.
 
 ## Usage
 
